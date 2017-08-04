@@ -17,7 +17,7 @@
   "homepage": "https://github.com/jstormes/ComposerInfo",
   "autoload": {
     "psr-4": {
-      "JStormes\\ComposerInfo\\": "./"
+      "JStormes\\ComposerInfo\\": "src/"
     }
   },
   "repositories": [

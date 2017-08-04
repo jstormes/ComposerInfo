@@ -3,12 +3,27 @@
     return array(
         'router' => array(
             'routes' => array(
-                'modulename-info' => array(
-                    'type' => 'segment',
+
+                'rest' => array(
+                    'type'    => 'Literal',
                     'options' => array(
-                        'route' => '/composer/info',
+                        'route'    => '/rest',
                         'defaults' => array(
-                                'controller' => 'ModuleName\Controller\Rest\Info',
+                            '__NAMESPACE__' => 'Application\Controller',
+                        ),
+                    ),
+                    'may_terminate' => true,
+                    'child_routes' => array(
+                        'default' => array(
+                            'type'    => 'Segment',
+                            'options' => array(
+                                'route'    => '/:controller[/:id][/]',
+                                'constraints' => array(
+                                    'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                ),
+                                'defaults' => array(
+                                ),
+                            ),
                         ),
                     ),
                 ),
