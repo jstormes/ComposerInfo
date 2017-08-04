@@ -1,5 +1,5 @@
 <?php
-namespace ModuleName;
+namespace JStormes\ComposerInfo;
 
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\ModuleRouteListener;
@@ -35,6 +35,7 @@ class Module
      */
     public function onBootstrap(MvcEvent $e)
     {
+        //die();
         //$eventManager        = $e->getApplication()->getEventManager();
         //$moduleRouteListener = new ModuleRouteListener();
         //$moduleRouteListener->attach($eventManager);
@@ -45,17 +46,6 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 
-    public function getAutoloaderConfig()
-    {
-
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
 
     /**
      * @return array
