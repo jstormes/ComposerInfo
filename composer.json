@@ -1,0 +1,63 @@
+{
+  "name": "prism/ModuleName",
+  "description": "ModuleDescription",
+  "require": {
+    "zendframework/zendframework": ">=2.3.7 <3.0",
+    "prism/User": "*",
+    "prism/Resource": "*",
+    "prism/Notification": "*",
+    "prism/DataAccess": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=4.5.0",
+    "robmorgan/phinx": "^0.6.4",
+    "phpunit/dbunit": "^2.0"
+  },
+  "license": "Digital Room, Inc.",
+  "keywords": [
+    "prism"
+  ],
+  "author": "James Stormes",
+  "homepage": "http://git.uprinting.com/mms/prism-imposition.git",
+  "autoload": {
+    "classmap": [
+      "Module.php",
+      "ComposerScripts.php"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:dw-team/prism-resource.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:dw-team/prism-user.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:dw-team/prism-notification.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:mms/prism-imposition.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:mms/prism-gang.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@git.uprinting.com:mms/prism-data-access.git"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit",
+    "post-create-project-cmd": [
+      "ComposerScripts::postCreateProject",
+      "@composer dumpautoload",
+      "rm -fr .git"
+    ],
+    "preflight": "ComposerScripts::hello"
+  }
+}

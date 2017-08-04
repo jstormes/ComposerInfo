@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<phpunit codecoverage="true" bootstrap="test/Bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="ModuleName">
+            <directory>test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+                <directory>src/ModuleName/Controller/*</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    
+    
+    <logging>
+
+    </logging>
+    
+</phpunit>
