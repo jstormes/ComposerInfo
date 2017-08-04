@@ -6,7 +6,7 @@
  * Time: 9:59 AM
  */
 
-namespace ModuleName\Service;
+namespace JStormes\ComposerInfo;
 
 class Ping
 {

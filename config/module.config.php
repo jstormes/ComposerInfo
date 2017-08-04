@@ -1,13 +1,14 @@
 <?php
+
     return array(
         'router' => array(
             'routes' => array(
-                'modulename-ping' => array(
+                'modulename-info' => array(
                     'type' => 'segment',
                     'options' => array(
-                        'route' => '/v1/moudlename/ping',
+                        'route' => '/composer/info',
                         'defaults' => array(
-                                'controller' => 'ModuleName\Controller\Rest\Ping',
+                                'controller' => 'ModuleName\Controller\Rest\Info',
                         ),
                     ),
                 ),
@@ -16,7 +17,7 @@
         ),
         'controllers' => array(
             'invokables' => array(
-                'ModuleName\Controller\Rest\Ping'          => 'ModuleName\Controller\Rest\Ping',
+                'ModuleName\Controller\Rest\Info'          => 'ModuleName\Controller\Rest\InfoController',
             ),
         ),
         'view_manager' => array(
