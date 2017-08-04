@@ -7,9 +7,9 @@
                 'rest' => array(
                     'type'    => 'Literal',
                     'options' => array(
-                        'route'    => '/rest',
+                        'route'    => '/composer',
                         'defaults' => array(
-                            '__NAMESPACE__' => 'Application\Controller',
+                            '__NAMESPACE__' => 'JStormes\Controller',
                         ),
                     ),
                     'may_terminate' => true,
@@ -32,7 +32,8 @@
         ),
         'controllers' => array(
             'invokables' => array(
-                'ModuleName\Controller\Rest\Info'          => 'ModuleName\Controller\Rest\InfoController',
+                'lock'          => JStormes\ComposerInfo\Controller\LockController::class,
+                'json'          => JStormes\ComposerInfo\Controller\JsonController::class,
             ),
         ),
         'view_manager' => array(
